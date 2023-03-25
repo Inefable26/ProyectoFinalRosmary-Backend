@@ -13,6 +13,8 @@ import com.portafolioross.ryanez.Security.Enums.RolNombre;
 import com.portafolioross.ryanez.Security.Service.RolService;
 import com.portafolioross.ryanez.Security.Service.UsuarioService;
 import com.portafolioross.ryanez.Security.jwt.JwtProvider;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import java.util.HashSet;
 import java.util.Set;
@@ -25,6 +27,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -96,5 +99,15 @@ public ResponseEntity<JwtDto> login(@Valid @RequestBody LoginUsuario loginUsuari
     return new ResponseEntity(jwtDto,HttpStatus.OK);
     
 }
+
+
+@PostMapping("/auth/logout")
+    public ResponseEntity<?> logout(HttpServletRequest request, HttpServletResponse response) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (authentication != null) {
+            new SecurityContextLogoutHandler().logout(request, response, authentication);
+        }
+        return new ResponseEntity<>(new Mensaje("Hasta pronto!"), HttpStatus.OK);
+    }
 
 }
