@@ -20,7 +20,6 @@ com\portafolioross\ryanez\Service\ImpEducationService.class
 com\portafolioross\ryanez\Entity\Project.class
 com\portafolioross\ryanez\Dto\dtoBanner.class
 com\portafolioross\ryanez\Security\Controller\Mensaje.class
-com\portafolioross\ryanez\WebConfig.class
 com\portafolioross\ryanez\Security\Entity\UsuarioPrincipal.class
 com\portafolioross\ryanez\Controller\ProjectController.class
 com\portafolioross\ryanez\Security\Entity\Rol.class
