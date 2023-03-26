@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 java.runtime.version=17
+=======
+java.runtime.version=17
+>>>>>>> 745df2e6c2871709e06577cbefb3715b3a2c88ff

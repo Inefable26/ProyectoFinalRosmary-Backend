@@ -1,4 +1,3 @@
-
 package com.portafolioross.ryanez.Entity;
 
 import jakarta.persistence.Entity;
