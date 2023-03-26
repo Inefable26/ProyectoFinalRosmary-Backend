@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 /**
@@ -43,7 +44,7 @@ public class JwtTokenFilter extends OncePerRequestFilter{
                         null,userDetails.getAuthorities());
                 SecurityContextHolder.getContext().setAuthentication(auth);
             }
-        }catch(Exception e){
+        }catch(UsernameNotFoundException e){
                     logger.error("Falla el metodo doFilterInternal");
         }
         filterChain.doFilter(request, response);
