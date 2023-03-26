@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author ryanez
  */
 @RestController
-@CrossOrigin(origins = "http://proyectofinalrosmary-backend-production.up.railway.app")
+@CrossOrigin(origins = "https://portafolio-ryanez.web.app")
 public class PersonaController {
 
     @Autowired

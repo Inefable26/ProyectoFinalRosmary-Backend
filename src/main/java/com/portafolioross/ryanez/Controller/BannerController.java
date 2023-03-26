@@ -29,7 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("banner")
-@CrossOrigin (origins = "http://proyectofinalrosmary-backend-production.up.railway.app")
+@CrossOrigin (origins = "https://portafolio-ryanez.web.app")
 public class BannerController {
     @Autowired
     ImpBannerService impBannerService;
