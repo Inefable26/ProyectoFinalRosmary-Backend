@@ -40,7 +40,6 @@ com\portafolioross\ryanez\Interface\IPersonaService.class
 com\portafolioross\ryanez\Security\Controller\AuthController.class
 com\portafolioross\ryanez\Controller\NetworkController.class
 com\portafolioross\ryanez\Service\ImpNetService.class
-.netbeans_automatic_build
 com\portafolioross\ryanez\Security\jwt\JwtProvider.class
 com\portafolioross\ryanez\Service\ImpBannerService.class
 com\portafolioross\ryanez\Service\ImpSkillsService.class
